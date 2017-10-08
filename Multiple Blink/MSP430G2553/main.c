@@ -2,23 +2,22 @@
 
 
 /**
- * main.c
+ * multi LED counter - pins 1.0 to 1.5
  */
  main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;       // stop watchdog timer
-    P1DIR |= 0x41;                  // configure P1.0 and P1.6 as output
-    P1OUT |= 0x41;                  // initialize LEDs to on
+    P1DIR |= 0x1F;                  // configure P1.0 thru P1.5 output
 
     volatile unsigned int i;        // volatile to prevent optimization
 
     while(1)
     {
-        P1OUT ^= 0x41;              // toggle P1.6 and P1.0 with XOR with 1 operation
-        for(i=50000; i>0; i--);     // delay
-        P1OUT ^= 0x01;              // toggle P1.0 with XOR with 1 operation
-        for(i=50000; i>0; i--);     // delay
-
-
+        if(P1OUT == 0x1F){
+            P1OUT = 0x00;
+        }else{
+            P1OUT++;
+        }
+        for(i=20000; i>0; i--);     // delay
     }
 }

@@ -13,10 +13,10 @@ int main(void)
 
     while(1)
     {
-        while(P1IN & BIT1){
-            P1OUT &= ~BIT0;
+        while(P1IN & BIT1){         //while button is off
+            P1OUT &= ~BIT0;         //turn off LED
         }
-        P1OUT |= BIT0;              // toggle P1.0 with XOR with 1 operation
+        P1OUT |= BIT0;              // turn on LED
 
     }
 }

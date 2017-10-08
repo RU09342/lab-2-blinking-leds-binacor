@@ -16,7 +16,7 @@ main(void)
     while(1) {
 
         P1OUT ^= 0x01;                      // Toggle P1.0 using exclusive-OR
-        P9OUT ^= 0x80;
+        P9OUT ^= 0x80;                      //Toggle P9.7
         for(i=50000;i>0;i--);               //delay
         P1OUT ^= 0x01;
         for(i=50000;i>0;i--);               //delay
