@@ -6,6 +6,5 @@ First, a 10uF bulk capacitor and 100pF bypass capacitor are connected in paralle
 The reset circuit consists of a button in parallel with a 100pF capacitor connected between the reset pin and ground.
 The LED circuit connects P1.0 to ground, in series with a 100ohm resistor to limit the current.
 The power source is a 3.3V power supply.
-Image of the circuit is attached below.
+Image and video of the circuit are attached in the lab2 folder.
 
-<img src="lab-2-blinking-leds-binacor/Off_Board Blink.jpg"/>
